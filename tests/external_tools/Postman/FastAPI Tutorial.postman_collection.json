@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "c0afc63a-f1a0-4b61-b666-0aa9b3662850",
+		"name": "FastAPI Tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Stage 1",
+			"item": [
+				{
+					"name": "Verify fastAPI is active",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Json test\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.body.to.equal()",
+									"});",
+									"",
+									"pm.test(\"message test\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.body.to.be.jsonBody({\"message\": \"I am alive!\"})",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
